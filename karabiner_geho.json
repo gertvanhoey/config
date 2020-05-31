@@ -265,6 +265,31 @@
           {
             "type": "basic",
             "from": {
+              "key_code": "tab",
+              "modifiers": { "mandatory" : [ "left_control" ] }
+            },
+            "to": [
+              {
+                "key_code": "tab",
+                "modifiers": [ "left_option"]
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com\\.parallels\\.desktop$",
+                  "^com\\.parallels\\.vm$",
+                  "^com\\.parallels\\.desktop\\.console$",
+                  "^com\\.parallels\\.winapp\\.",
+                  "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
               "key_code": "left_gui",
               "modifiers": { "optional": [ "any" ] }
             },
