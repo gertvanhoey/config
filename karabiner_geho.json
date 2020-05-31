@@ -258,6 +258,59 @@
             ]
           }
         ]
+      },
+      {
+        "description": "Change Cmd into Ctrl in virtual machine/remote desktop",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "left_gui",
+              "modifiers": { "optional": [ "any" ] }
+            },
+            "to": [
+              {
+                "key_code": "left_control"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com\\.parallels\\.desktop$",
+                  "^com\\.parallels\\.vm$",
+                  "^com\\.parallels\\.desktop\\.console$",
+                  "^com\\.parallels\\.winapp\\.",
+                  "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "right_gui",
+              "modifiers": { "optional": [ "any" ] }
+            },
+            "to": [
+              {
+                "key_code": "right_control"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com\\.parallels\\.desktop$",
+                  "^com\\.parallels\\.vm$",
+                  "^com\\.parallels\\.desktop\\.console$",
+                  "^com\\.parallels\\.winapp\\.",
+                  "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }
