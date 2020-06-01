@@ -337,6 +337,23 @@
             ]
           }
         ]
+      },
+      {
+        "description": "Change Caps Lock into Escape",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "caps_lock",
+              "modifiers": { "optional": [ "any" ] }
+            },
+            "to": [
+              {
+                "key_code": "escape"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
