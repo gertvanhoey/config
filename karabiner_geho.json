@@ -260,7 +260,7 @@
         ]
       },
       {
-        "description": "Change Cmd into Ctrl in virtual machine/remote desktop",
+        "description": "Change Ctrl Tab into Option Tab in Qt Creator",
         "manipulators": [
           {
             "type": "basic",
@@ -271,22 +271,23 @@
             "to": [
               {
                 "key_code": "tab",
-                "modifiers": [ "left_option"]
+                "modifiers": [ "left_alt"]
               }
             ],
             "conditions": [
               {
                 "type": "frontmost_application_if",
                 "bundle_identifiers": [
-                  "^com\\.parallels\\.desktop$",
-                  "^com\\.parallels\\.vm$",
-                  "^com\\.parallels\\.desktop\\.console$",
-                  "^com\\.parallels\\.winapp\\.",
-                  "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                  "^org\\.qt-project\\.qtcreator$"
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "description": "Change Cmd into Ctrl in virtual machine/remote desktop",
+        "manipulators": [
           {
             "type": "basic",
             "from": {
